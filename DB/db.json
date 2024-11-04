@@ -1,0 +1,109 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "Lorenzo Pourpour"
+  },
+  "plants": [
+    {
+      "id": "1",
+      "price": "25.90",
+      "name": "Monstera Deliciosa",
+      "image": "img/monstera_deliciosa.webp",
+      "descalt": "Pianta sempre verde di Monstera Obliqua"
+    },
+    {
+      "id": "2",
+      "price": "18.90",
+      "name": "Sanseviera Trifasciata",
+      "image": "img/sanseviera_trifasciata.avif",
+      "descalt": "Pianta sempre verde di Sanseviera trifasciata"
+    },
+    {
+      "id": "3",
+      "price": "32.90",
+      "name": "Sempre Verde",
+      "image": "img/sempre_verde.jpg",
+      "descalt": "Pianta sempre verde"
+    }
+  ],
+  "carrello": [
+    {
+      "id": "2",
+      "prezzo": "18.90",
+      "nome": "Sanseviera Trifasciata"
+    }
+  ],
+  "acquisti": [
+    {
+      "id": "df9b",
+      "nome": "sdf",
+      "cognome": "sdf",
+      "email": "sdf",
+      "metodoPagamento": "PayPal",
+      "totale": "32.90€"
+    },
+    {
+      "id": "c7e0",
+      "nome": "sdf",
+      "cognome": "sdf",
+      "email": "dsf",
+      "metodoPagamento": "PayPal",
+      "totale": "32.90€"
+    },
+    {
+      "id": "dfd0",
+      "nome": "d",
+      "cognome": "f",
+      "email": "f",
+      "metodoPagamento": "Satyspay",
+      "totale": "32.90€"
+    },
+    {
+      "id": "d721",
+      "nome": "F",
+      "cognome": "F",
+      "email": "F",
+      "metodoPagamento": "PayPal",
+      "totale": "32.90€"
+    },
+    {
+      "id": "f065",
+      "nome": "sdf",
+      "cognome": "DS",
+      "email": "asdfasf@asfa.com",
+      "metodoPagamento": "Satyspay",
+      "totale": "18.90€"
+    },
+    {
+      "id": "0c50",
+      "nome": "d",
+      "cognome": "d",
+      "email": "d",
+      "metodoPagamento": "Satyspay",
+      "totale": "70.70€"
+    }
+  ]
+}

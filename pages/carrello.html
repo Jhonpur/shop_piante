@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="../img/favicon.png" type="image/png" />
+        <title>Flowers Party</title>
+        
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- CSS font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-success bg-gradient">
+                <div class="container-fluid">
+                    <i class="bi bi-tree-fill text-white fs-2"></i>
+                    <a id="insegna" class="navbar-brand text-white" href="../index.html">Flowers Party</a>
+                    <button
+                        class="navbar-toggler d-lg-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul id="pages" class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../index.html" aria-current="page"
+                                >Home <span class="visually-hidden">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Carrello <i class="bi bi-basket"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+             </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row mt-4">
+                    <h1 id="chart">Carrello <i class="bi bi-basket"></i></h1> 
+                    
+                    <div class="col-4 mt-4">
+                        <!-- Esercizio: costruisci il totale veritiero. FATTO
+                         <i class="bi bi-basket"></i> icona carrello FATTO
+                         Dopodichè crea un form con le informazioni per l'acquisto:FATTO
+                         NOME COGNOME,FATTO
+                         EMAIL,FATTO
+                         METODO DI PAGAMENTO, (CC, PAYPAL, SATYSPAY) [Se scelgo cc mi compare nuovo campo input nel quale inserire il numero di carta di credito] FATTO
+                         ACCETTA TERMINI E CONDIZIONI,  FATTO
+                         PULSANTE PAGA FATTO
+                         
+                         ATT: il form deve essere controllato FATTO
+                         
+                         Quando acquisto carico le info sul DB, nella proprietà "ACQUISTI" FATTO-->
+
+                        <ul class="list-group" id="listaCarrello">
+                            
+                        </ul>
+
+                    </div>
+
+                    <div class="col-4 mt-4" >
+                        <h3 id="totale"></h3>
+
+                        <hr class="my-4">
+
+                        <form id="formPagamaneto">
+                            <h4 class="mb-3 mt-3">Pagamento</h4>
+                            <div class="input-group mt-2">
+                                <span class="input-group-text">Nome e Cognome</span>
+                                <input id="nome"  type="text" aria-label="First name" class="form-control" placeholder="Nome" required>
+                                <input id="cognome" type="text" aria-label="Last name" class="form-control" placeholder="Cognome" required>
+                            </div>
+
+                            <div class="col mt-2">
+                                <label for="email" class="form-label">Email <span class="text-body-secondary">(Opzionale)</span></label>
+                                <input id="email" type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <div class="invalid-feedback">
+                                Inserisci una email valida
+                                </div>
+                            </div>
+
+                            <div class="my-3">
+                                <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" value="Carta di credito" required>
+                                <label class="form-check-label" for="credit">Carta di credito</label>
+                                <i class="bi bi-credit-card-2-front"></i>
+                                </div>
+
+                                <div class="form-check">
+                                <input id="satyspay" name="paymentMethod" type="radio" class="form-check-input" value="Satyspay" required>
+                                <label class="form-check-label" for="debit">Satyspay</label>
+                                <img src="../img/saty.png" alt="Satispay" width="24" height="24">
+                                </div>
+
+                                <div class="form-check">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" value="PayPal" required>
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                                <img src="../img/paypal.png" alt="Satispay" width="24" height="24">
+                                </div>
+
+                                <div class="row gy-3" id="cc-campi" style="display:none;">
+                                    <div class="col-md-6">
+                                        <label for="nomeCard" class="form-label">Nome sulla carta</label>
+                                        <input id="nomeCard" type="text" class="form-control" placeholder="Nome e Cognome" required>
+                                    </div>
+                                
+                                    <div class="col-md-6">
+                                    <label for="numCard" class="form-label">Numero carta di credito</label>
+                                    <input id="numCard" type="text" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="\d{16}" required>
+                                    <div class="invalid-feedback">
+                                        Credit card number is required
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr class="my-2">
+                            
+                            <div class="form-check">
+                                <input id="termsCond" class="form-check-input" type="checkbox" required/>
+                                <label class="form-check-label" for="termsCond"> Accetta Termini e Condizioni </label>
+                            </div>
+                            
+                            <button id="btnPaga" class="w-100 btn btn-primary btn-lg mt-2" type="submit">Paga</button>
+                        </form>
+                            
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="../js/scriptCarrello.js"></script>
+    </body>
+</html>

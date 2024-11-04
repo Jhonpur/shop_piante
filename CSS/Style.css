@@ -1,0 +1,35 @@
+.fahkwang-regular {
+    font-family: "Fahkwang", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .fahkwang-medium {
+    font-family: "Fahkwang", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .fahkwang-bold {
+    font-family: "Fahkwang", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+#insegna{
+    font-family: "Fahkwang", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#pages{
+    font-family: "Fahkwang", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#chart{
+    font-family: "Fahkwang", serif;
+    font-weight: 700;
+    font-style: normal;
+}
